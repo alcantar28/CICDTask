@@ -1,4 +1,4 @@
-﻿name: .NET ATM CICD Pipeline
+name: .NET ATM CICD Pipeline
 on:
   push:
     branches:
