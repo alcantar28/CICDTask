@@ -24,7 +24,7 @@ jobs:
     - name: Install Chrome dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y wget unzip xvfb libxi6 libconf-2-4
+        sudo apt-get install -y wget unzip xvfb libxi6
         sudo apt-get install -y google-chrome-stable
         google-chrome --version
         which google-chrome
