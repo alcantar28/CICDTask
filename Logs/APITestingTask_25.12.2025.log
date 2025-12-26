@@ -1,0 +1,187 @@
+2025-12-25 14:07:51,223 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 14:07:51,223 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 14:07:51,812 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 14:07:51,816 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 14:07:51,816 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 14:07:51,818 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 14:07:51,818 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 14:07:51,819 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 14:07:51,819 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 14:07:51,821 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 14:08:31,793 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 14:08:32,457 ERROR CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] 
+ METHOD: MoveNext 
+ MESSAGE: The actual value must be not-null, a string, Guid, have an int Count property, IEnumerable or DirectoryInfo. The value passed was of type System.Int32. (Parameter 'actual') 
+ STACK TRACE:    at NUnit.Framework.Constraints.EmptyConstraint.ApplyTo[TActual](TActual actual)
+   at NUnit.Framework.Constraints.OrConstraint.ApplyTo[TActual](TActual actual)
+   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, NUnitString message, String actualExpression, String constraintExpression)
+   at CICD.Endpoints.Users.UsersAPITests.ValidateAUserCanBeCreated() in C:\EPAM Learning\Automated Testing Mentoring with .NET Basic [self-study]\Code\TAF_API\Tests\UsersAPITests.cs:line 122 
+ EXCEPTION: System.ArgumentException: The actual value must be not-null, a string, Guid, have an int Count property, IEnumerable or DirectoryInfo. The value passed was of type System.Int32. (Parameter 'actual')
+   at NUnit.Framework.Constraints.EmptyConstraint.ApplyTo[TActual](TActual actual)
+   at NUnit.Framework.Constraints.OrConstraint.ApplyTo[TActual](TActual actual)
+   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, NUnitString message, String actualExpression, String constraintExpression)
+   at CICD.Endpoints.Users.UsersAPITests.ValidateAUserCanBeCreated() in C:\EPAM Learning\Automated Testing Mentoring with .NET Basic [self-study]\Code\TAF_API\Tests\UsersAPITests.cs:line 122
+2025-12-25 14:08:32,458 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 14:08:51,563 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 14:08:52,032 ERROR CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] 
+ METHOD: MoveNext 
+ MESSAGE: The actual value must be not-null, a string, Guid, have an int Count property, IEnumerable or DirectoryInfo. The value passed was of type System.Int32. (Parameter 'actual') 
+ STACK TRACE:    at NUnit.Framework.Constraints.EmptyConstraint.ApplyTo[TActual](TActual actual)
+   at NUnit.Framework.Constraints.OrConstraint.ApplyTo[TActual](TActual actual)
+   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, NUnitString message, String actualExpression, String constraintExpression)
+   at CICD.Endpoints.Users.UsersAPITests.ValidateAUserCanBeCreated() in C:\EPAM Learning\Automated Testing Mentoring with .NET Basic [self-study]\Code\TAF_API\Tests\UsersAPITests.cs:line 122 
+ EXCEPTION: System.ArgumentException: The actual value must be not-null, a string, Guid, have an int Count property, IEnumerable or DirectoryInfo. The value passed was of type System.Int32. (Parameter 'actual')
+   at NUnit.Framework.Constraints.EmptyConstraint.ApplyTo[TActual](TActual actual)
+   at NUnit.Framework.Constraints.OrConstraint.ApplyTo[TActual](TActual actual)
+   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, NUnitString message, String actualExpression, String constraintExpression)
+   at CICD.Endpoints.Users.UsersAPITests.ValidateAUserCanBeCreated() in C:\EPAM Learning\Automated Testing Mentoring with .NET Basic [self-study]\Code\TAF_API\Tests\UsersAPITests.cs:line 122
+2025-12-25 14:08:52,033 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 14:10:11,419 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 14:10:11,933 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 14:11:02,391 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 14:11:02,906 ERROR CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] 
+ METHOD: MoveNext 
+ MESSAGE:   Assert.That(createUserResponse.StatusCode, Is.EqualTo(HttpStatusCode.Forbidden))
+  Expected: Forbidden
+  But was:  Created
+ 
+ STACK TRACE:    at NUnit.Framework.Assert.ReportFailure(String message)
+   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, String actualExpression, String constraintExpression)
+   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, NUnitString message, String actualExpression, String constraintExpression)
+   at CICD.Endpoints.Users.UsersAPITests.ValidateAUserCanBeCreated() in C:\EPAM Learning\Automated Testing Mentoring with .NET Basic [self-study]\Code\TAF_API\Tests\UsersAPITests.cs:line 123 
+ EXCEPTION: NUnit.Framework.AssertionException:   Assert.That(createUserResponse.StatusCode, Is.EqualTo(HttpStatusCode.Forbidden))
+  Expected: Forbidden
+  But was:  Created
+
+   at NUnit.Framework.Assert.ReportFailure(String message)
+   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, String actualExpression, String constraintExpression)
+   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, NUnitString message, String actualExpression, String constraintExpression)
+   at CICD.Endpoints.Users.UsersAPITests.ValidateAUserCanBeCreated() in C:\EPAM Learning\Automated Testing Mentoring with .NET Basic [self-study]\Code\TAF_API\Tests\UsersAPITests.cs:line 123
+2025-12-25 14:11:02,907 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 14:38:29,628 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 14:38:29,669 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 14:39:16,916 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 14:40:38,761 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 14:42:41,024 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 14:44:23,181 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 14:44:29,102 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 14:44:54,978 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 14:44:54,978 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 14:44:55,359 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 14:44:55,365 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 14:44:55,366 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 14:44:55,369 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 14:44:55,369 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 14:44:55,369 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 14:44:55,369 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 14:44:55,374 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 15:24:36,114 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 15:24:36,128 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 17:59:44,964 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 17:59:44,964 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 17:59:45,557 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 17:59:45,557 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 17:59:45,564 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 17:59:45,564 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 17:59:45,564 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 17:59:45,564 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 17:59:45,810 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 17:59:45,811 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:02:55,973 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 18:02:55,973 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 18:02:56,530 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 18:02:56,536 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 18:02:56,536 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:02:56,538 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:02:56,538 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:02:56,538 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:02:56,539 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:02:56,541 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 18:03:45,981 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 18:03:45,981 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 18:03:46,345 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 18:03:46,350 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:03:46,353 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 18:03:46,353 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:03:46,353 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:03:46,355 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:03:46,356 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:03:46,358 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 18:04:48,357 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 18:04:48,357 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 18:04:48,781 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 18:04:48,785 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 18:04:48,785 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:04:48,787 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:04:48,787 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:04:48,788 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:04:48,789 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:04:48,790 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 18:09:24,684 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 18:09:25,164 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:18:10,315 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:18:10,333 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:18:29,527 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:18:29,544 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:22:37,051 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 18:22:37,051 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 18:22:37,605 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 18:22:37,610 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:22:37,614 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:22:37,614 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 18:22:37,614 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:22:37,616 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:22:37,617 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:22:37,619 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 18:25:41,308 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 18:25:41,308 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 18:25:41,895 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 18:25:41,902 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:25:41,908 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:25:41,908 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 18:25:41,912 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:25:41,913 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:25:41,914 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 18:25:41,956 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:29:25,602 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 18:29:25,602 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 18:29:26,046 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 18:29:26,053 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:29:26,053 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 18:29:26,053 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:29:26,054 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:29:26,056 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:29:26,057 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:29:26,060 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 18:33:10,751 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:33:10,751 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 18:33:10,751 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 18:33:10,751 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 18:33:10,751 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 18:33:11,281 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:33:11,281 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:33:11,283 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:33:11,284 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:33:11,287 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 18:34:37,868 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] -STARTING API TEST
+2025-12-25 18:34:37,868 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] -STARTING API TEST
+2025-12-25 18:34:37,868 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 18:34:37,868 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] -STARTING API TEST
+2025-12-25 18:34:37,868 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 18:34:38,299 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:34:38,300 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:34:38,301 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:34:38,302 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:34:38,305 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 18:39:01,916 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] -STARTING API TEST
+2025-12-25 18:39:02,440 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:39:02,440 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:39:02,440 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:39:02,440 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:39:02,444 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
+2025-12-25 18:50:32,018 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] -STARTING API TEST
+2025-12-25 18:50:32,523 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateIfAUserDoesNotExist] - ENDING API TEST
+2025-12-25 18:50:32,523 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateUsersCanBeReceivedSuccessfully] - ENDING API TEST
+2025-12-25 18:50:32,523 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateAUserCanBeCreated] - ENDING API TEST
+2025-12-25 18:50:32,523 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseHeaderForAListOfUsers] - ENDING API TEST
+2025-12-25 18:50:32,527 INFO  CICD.Core.Utilities.LogFileCreator - [ValidateResponseForAListOfUsers] - ENDING API TEST
