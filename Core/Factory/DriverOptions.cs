@@ -10,6 +10,10 @@ namespace CICD.Core.Factory
         public static ChromeOptions ChromeDriverHeadlessOptions()
         {
             var chromeOptions = new ChromeOptions();
+            //These arguments are needed for running the code in CI/CD pipeline
+            chromeOptions.AddArgument("--no-sandbox");
+            chromeOptions.AddArgument("--disable-dev-shm-usage");
+            
             chromeOptions.AddArgument("--headless");
             chromeOptions.AddUserProfilePreference("download.default_directory", downloadsPath);
             chromeOptions.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);
@@ -59,3 +63,4 @@ namespace CICD.Core.Factory
         }
     }
 }
+
