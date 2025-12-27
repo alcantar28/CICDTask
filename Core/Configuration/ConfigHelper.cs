@@ -8,7 +8,6 @@ namespace CICD.Core.Configuration
 {
     public class ConfigHelper
     {
-        const string ConfigDirectory = "\\Core\\Configuration";
         const string ConfigFileName = "appconfig";
         const string ConfigFileExtension = ".json";
         const string logConfigFile = "log4net.config";
@@ -21,7 +20,7 @@ namespace CICD.Core.Configuration
         private static string GetSettingsFile()
         {
             var path = GetProjectDirectory();
-            var filesInConfigDir = Directory.GetFiles(path + ConfigDirectory);
+            var filesInConfigDir = Directory.GetFiles(path);
             var settingsFile = filesInConfigDir.FirstOrDefault(x => x.Contains($"{ConfigFileName}{ConfigFileExtension}"));
 
             if (settingsFile == null)
@@ -57,7 +56,7 @@ namespace CICD.Core.Configuration
         {
             //Configure log4net using log4net.config file
             var path = GetProjectDirectory();
-            var logConfigPath = $"{path}{ConfigDirectory}\\{logConfigFile}";
+            var logConfigPath = @$"{path}\{logConfigFile}";
             XmlConfigurator.Configure(new FileInfo(logConfigPath));
 
             //Obtain minimum log level from appconfig.json
