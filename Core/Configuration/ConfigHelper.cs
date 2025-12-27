@@ -2,20 +2,20 @@ using log4net;
 using log4net.Config;
 using log4net.Core;
 using Microsoft.Extensions.Configuration;
+using System.Reflection;
 
 namespace CICD.Core.Configuration
 {
     public class ConfigHelper
     {
-        const string ConfigDirectory = "Core\\Configuration";
+        const string ConfigDirectory = "\\Core\\Configuration";
         const string ConfigFileName = "appconfig";
         const string ConfigFileExtension = ".json";
         const string logConfigFile = "log4net.config";
 
         public static string GetProjectDirectory()
         {
-            var path = AppContext.BaseDirectory;
-            return path.Substring(0, path.LastIndexOf("bin"));
+            return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         }
 
         private static string GetSettingsFile()
