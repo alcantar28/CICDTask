@@ -25,7 +25,7 @@ jobs:
       run: |
           sudo apt-get update
           sudo apt-get install google-chrome-stable
-          sudo apt-get install -y libglib2.0-0 libnss3 libgconf-2-4 libfontconfig1
+          sudo apt-get install -y libglib2.0-0 libnss3 libfontconfig1
           google-chrome --version
           which google-chrome
 
