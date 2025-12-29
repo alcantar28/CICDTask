@@ -51,6 +51,11 @@ jobs:
       run: dotnet build --configuration Release --no-restore
       working-directory: .
 
-    - name: "Run tests"
-      run: dotnet test --configuration Release --no-build --verbosity normal
+    - name: "Run API tests"
+      run: dotnet test --filter Category=API --configuration Release --no-build --verbosity normal
       working-directory: .
+
+    - name: "Run UI tests"
+      run: dotnet test --filter Category=UI --configuration Release --no-build --verbosity normal
+      working-directory: .
+    
