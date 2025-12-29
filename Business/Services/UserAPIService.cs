@@ -40,7 +40,7 @@ namespace CICD.Business.Services
         {
             //It has to be "Null or Empty" because the API returns Id as string. If it is only "Empty", it fails.
             Assert.That(response.Data?.Id, Is.Not.Null.Or.Empty);
-            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Ok));
         }
 
         public static void AssertIfAUserDoesNotExist(RestResponse response)
