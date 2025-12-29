@@ -3,7 +3,6 @@
 namespace CICD.Tests  //Faltaba namespace
 {
     [TestFixture]
-    [Category("UI")]
     public class TAFTests: BaseTest  //clase pública
     {
         //Needs an empty constructor to avoid "OneTimeSetup: No suitable constructor was found" error.
