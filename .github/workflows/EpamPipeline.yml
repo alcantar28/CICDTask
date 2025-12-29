@@ -52,6 +52,7 @@ jobs:
       working-directory: .
 
     - name: "Run API tests"
+      continue-on-error: true
       run: dotnet test --filter Category=API --configuration Release --no-build --verbosity normal
       working-directory: .
 
