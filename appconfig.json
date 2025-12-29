@@ -1,7 +1,7 @@
 {
   "browser": "chrome",
   "url": "https://www.epam.com",
-  "headless": "false",
+  "headless": "true",
   "logConfigFile": "log4net.config",
   "Logging": {
     "MinimumLevel": "all"

@@ -1,10 +1,11 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿using CICD.Core.Configuration;
+using CICD.Core.Utilities;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
+using Selenium.WebDriver.UndetectedChromeDriver;
 using System.Reflection;
-using CICD.Core.Utilities;
-using CICD.Core.Configuration;
 
 namespace CICD.Core.Factory
 {
@@ -23,16 +24,15 @@ namespace CICD.Core.Factory
                 switch (browser.ToUpper())
                 {
                     case "CHROME":
-                        var chromeOptions = isHeadless ? DriverOptions.ChromeDriverHeadlessOptions() : new ChromeOptions();
-                        driver.Value = new ChromeDriver(chromeOptions);
+                        //var chromeOptions = isHeadless ? DriverOptions.ChromeDriverHeadlessOptions() : new ChromeOptions();
+                        //driver.Value = isHeadless ? DriverOptions.ChromeDriverHeadlessOptions() : new ChromeDriver(new ChromeOptions());//new ChromeDriver(chromeOptions);
+                        driver.Value = isHeadless ? DriverOptions.CreateUndetectedChromeDriverHeadless() : DriverOptions.CreateUndetectedChromeDriver();
                         break;
                     case "EDGE":
-                        var edgeOptions = isHeadless ? DriverOptions.EdgeDriverHeadlessOptions() : new EdgeOptions();
-                        driver.Value = new EdgeDriver(edgeOptions);
+                        driver.Value = isHeadless ? DriverOptions.EdgeDriverHeadlessOptions() : new EdgeDriver(new EdgeOptions());
                         break;
                     case "FIREFOX":
-                        var firefoxOptions = isHeadless ? DriverOptions.FirefoxHeadlessDriverOptions() : DriverOptions.FirefoxDriverOptions();
-                        driver.Value = new FirefoxDriver(firefoxOptions);
+                        driver.Value = isHeadless ? DriverOptions.FirefoxHeadlessDriverOptions() : DriverOptions.FirefoxDriverOptions();
                         break;
                     default:
                         string methodName = MethodBase.GetCurrentMethod().Name;
@@ -40,7 +40,11 @@ namespace CICD.Core.Factory
                         throw new Exception($"Unable to set browser type {browser}");
                 }
                 driver.Value.Manage().Timeouts().ImplicitWait.Add(TimeSpan.FromSeconds(Seconds));
-                driver.Value.Manage().Window.Maximize();
+                // Window.Maximize() does not work in headless mode, window size must be set via arguments
+                if (!isHeadless)
+                {
+                    driver.Value.Manage().Window.Maximize();
+                }
             }
             return driver.Value;
         }
