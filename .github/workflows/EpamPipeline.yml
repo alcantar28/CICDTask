@@ -60,8 +60,10 @@ jobs:
       run: dotnet test --filter Category=UI --configuration Release --no-build --verbosity normal
       working-directory: .
 
-    #- name: "Create folder for artifacts"
-     # run: |
+    - name: "Get Github folder"
+      run: |
+        echo '${{ GITHUB_WORKSPACE }}'
+
       #  mkdir -p $GITHUB_WORKSPACE/test-results
         
     - name: "Upload artifacts"
