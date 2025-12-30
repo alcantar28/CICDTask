@@ -14,9 +14,11 @@ on:
         description: "Browser parameter supplied when running pipeline manually where to run the tests"
         required: true
         type: string
+        default: 'chrome'
 
 env:
   OUTPUT_DIR: $GITHUB_WORKSPACE/bin/Release/net8.0
+  BROWSER: ${{ inputs.browser }}
 
 jobs:
   build:
