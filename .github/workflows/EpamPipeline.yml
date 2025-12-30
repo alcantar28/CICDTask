@@ -69,5 +69,5 @@ jobs:
       with:
         name: error-screenshot
         path: |
-          $GITHUB_WORKSPACE/test-results/*.png
+          $GITHUB_WORKSPACE/*.png
         overwrite: true
