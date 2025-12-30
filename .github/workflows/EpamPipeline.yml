@@ -62,7 +62,7 @@ jobs:
 
     - name: "Get Github folder"
       run: |
-        echo '${{ GITHUB_WORKSPACE }}'
+        echo $GITHUB_WORKSPACE
 
       #  mkdir -p $GITHUB_WORKSPACE/test-results
         
