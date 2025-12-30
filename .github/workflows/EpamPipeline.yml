@@ -62,7 +62,7 @@ jobs:
 
     - name: "Get Github folder"
       run: |
-        echo $GITHUB_WORKSPACE
+        cd $GITHUB_WORKSPACE/bin/Debug/net8.0
         dir
 
       #  mkdir -p $GITHUB_WORKSPACE/test-results
