@@ -9,6 +9,11 @@ on:
     branches:
     - main
   workflow_dispatch:
+    inputs:
+      browser:
+        description: "Browser parameter supplied when running pipeline manually where to run the tests"
+        required: true
+        type: string
 
 env:
   OUTPUT_DIR: $GITHUB_WORKSPACE/bin/Release/net8.0
