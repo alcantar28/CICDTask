@@ -56,7 +56,7 @@ jobs:
 
     - name: "Run UI tests"
       continue-on-error: true
-      run: dotnet test -- TestRunParameters.Parameter(name=\"browser\", value=\"${{ inputs.browser }}\") --filter Category=UI --configuration Release --no-build --verbosity normal
+      run: dotnet test -- TestRunParameters.Parameter(name="browser", value="${{ env.BROWSER }}") --filter Category=UI --configuration Release --no-build --verbosity normal
       working-directory: .
 
     - name: "Upload artifacts"
