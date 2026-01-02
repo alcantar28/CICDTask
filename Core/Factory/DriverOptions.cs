@@ -11,20 +11,22 @@ namespace CICD.Core.Factory
         {
             var chromeOptions = new ChromeOptions();
             //These arguments are needed for running the code in CI/CD pipeline
-            //chromeOptions.AddArgument("--no-sandbox");
-            //chromeOptions.AddArgument("--disable-dev-shm-usage");
-            
+            chromeOptions.AddArgument("--no-sandbox");
+            chromeOptions.AddArgument("--disable-dev-shm-usage");
+            chromeOptions.AddArgument("--headless=new");
+            chromeOptions.AddUserProfilePreference("download.default_directory", downloadsPath);
+            chromeOptions.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);
+            chromeOptions.AddArgument("--window-size=1920, 1080");
+
+            ////Tried to overcome the Cloudflare issue based on DIAL's suggestion, but it didn't work
             //chromeOptions.AddArgument("--headless=new");
-            //chromeOptions.AddUserProfilePreference("download.default_directory", downloadsPath);
-            //chromeOptions.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);
-            //chromeOptions.AddArgument("--window-size=1920, 1080");
-            chromeOptions.AddArgument("--incognito");
-            chromeOptions.AddArgument("disable-infobars");
-            chromeOptions.AddArgument("--disable-blink-features=AutomationControlled");
-            chromeOptions.AddExcludedArgument("enable-automation");
-            chromeOptions.AddAdditionalOption("useAutomationExtension", false);
-            chromeOptions.AddArgument("window-size=1920,1080");
-            chromeOptions.AddArgument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
+            //chromeOptions.AddArgument("--incognito");
+            //chromeOptions.AddArgument("disable-infobars");
+            //chromeOptions.AddArgument("--disable-blink-features=AutomationControlled");
+            //chromeOptions.AddExcludedArgument("enable-automation");
+            //chromeOptions.AddAdditionalOption("useAutomationExtension", false);
+            //chromeOptions.AddArgument("window-size=1920,1080");
+            //chromeOptions.AddArgument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
             return chromeOptions;
         }
 
@@ -70,6 +72,7 @@ namespace CICD.Core.Factory
         }
     }
 }
+
 
 
 
