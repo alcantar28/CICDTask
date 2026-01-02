@@ -25,9 +25,10 @@ namespace CICD.Tests
         public void Cleanup()
         {
             LogFileCreator.LogCloseWebsiteInfo();
-            if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
+            var testStatus = TestContext.CurrentContext.Result.Outcome.Status;
+            if (testStatus.Equals(TestStatus.Failed) || testStatus.Equals(TestStatus.Inconclusive))
             {
-                ScreenshotMaker.TakeBrowserScreenshot(DriverManager.GetInstance());
+                ScreenshotMaker.TakeScreenshot(DriverManager.GetInstance());
             }
             DriverManager.QuitDriver();
         }

@@ -4,16 +4,11 @@ namespace CICD.Core.Utilities
 {
     public static class ScreenshotMaker
     {
-        public static string NewScreenshotDate
+        public static void TakeScreenshot(IWebDriver driver)
         {
-            get { return $"_{DateTime.Now.ToString("yyyy-MM-dd_hh-mm-ss-fff")}.png"; }
-        }
-
-        public static void TakeBrowserScreenshot(IWebDriver driver)
-        {
-            var screenshotPath = Path.Combine(Environment.CurrentDirectory, TestContext.CurrentContext.Test.MethodName + NewScreenshotDate);
-            var image = (driver as ITakesScreenshot).GetScreenshot();
-            image.SaveAsFile(screenshotPath);
+            var screenshotFile = Path.Combine(Environment.CurrentDirectory, TestContext.CurrentContext.Test.MethodName + ".png");
+            ITakesScreenshot ScreenshotDriver = (ITakesScreenshot)driver;
+            ScreenshotDriver.GetScreenshot().SaveAsFile(screenshotFile);
         }
     }
 }

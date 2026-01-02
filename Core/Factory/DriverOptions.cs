@@ -11,9 +11,15 @@ namespace CICD.Core.Factory
         {
             var chromeOptions = new ChromeOptions();
             //These arguments are needed for running the code in CI/CD pipeline
+            chromeOptions.AddArgument("--headless=new");
             chromeOptions.AddArgument("--no-sandbox");
             chromeOptions.AddArgument("--disable-dev-shm-usage");
-            chromeOptions.AddArgument("--headless=new");
+            chromeOptions.AddArgument("--disable-gpu");
+            chromeOptions.AddArgument("--disable-blink-features=AutomationControlled");
+            chromeOptions.AddArgument("--disable-extensions");
+            chromeOptions.AddArgument("--disable-infobars");
+            chromeOptions.AddArgument("--start-maximized");
+            chromeOptions.AddArgument("--verbose");
             chromeOptions.AddUserProfilePreference("download.default_directory", downloadsPath);
             chromeOptions.AddUserProfilePreference("profile.default_content_setting_values.automatic_downloads", 1);
             chromeOptions.AddArgument("--window-size=1920, 1080");
