@@ -13,8 +13,8 @@ namespace CICD.Business.Pages
         public BasePage(IWebDriver driver)
         { 
             this.driver = driver;
-            //To skip Cloudflare human validation
-            ((IJavaScriptExecutor)driver).ExecuteScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
+            ////Tried to overcome the Cloudflare issue based on DIAL's suggestion, but it didn't work
+            //((IJavaScriptExecutor)driver).ExecuteScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
         }
 
         public void OpenHomePage()
@@ -35,3 +35,4 @@ namespace CICD.Business.Pages
     }
 
 }
+
