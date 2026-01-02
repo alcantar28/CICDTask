@@ -43,13 +43,8 @@ jobs:
 
     - name: Install Firefox dependencies
       if: ${{ env.BROWSER == 'firefox' }}
-      run: |
-          wget -O firefox.tar.bz2 "download.mozilla.org"
-          sudo mkdir -p /opt/firefox
-          sudo tar xjf firefox.tar.bz2 -C /opt/firefox --strip-components=1
-          echo "PATH=$PATH:/opt/firefox" >> $GITHUB_ENV
-          firefox --version
-      
+      uses: browser-actions/setup-firefox@v1
+    
     - name: "Restore dependencies"
       run: dotnet restore
       working-directory: .
