@@ -13,6 +13,8 @@ namespace CICD.Business.Pages
         public BasePage(IWebDriver driver)
         { 
             this.driver = driver;
+            //To skip Cloudflare human validation
+            ((IJavaScriptExecutor)driver).ExecuteScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
         }
 
         public void OpenHomePage()
@@ -31,4 +33,5 @@ namespace CICD.Business.Pages
             }
         }
     }
+
 }
