@@ -55,7 +55,7 @@ jobs:
 
     - name: "Run UI tests"
       continue-on-error: true
-      run: dotnet test CICDTask.csproj --filter Category=UI --configuration Release --no-build --verbosity normal -- TestRunParameters.Parameter(name=\"browser\", value=\"${{ env.BROWSER }}\")
+      run: dotnet test CICDTask.csproj --filter Category=UI --configuration Release --no-build --verbosity normal -- TestRunParameters.Parameter name=\"browser\", value=\"${{ env.BROWSER }}\"
       working-directory: .
 
     - name: "Upload artifacts"
