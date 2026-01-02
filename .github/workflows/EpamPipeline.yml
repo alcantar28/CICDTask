@@ -17,7 +17,7 @@ on:
 
 env:
   OUTPUT_DIR: $GITHUB_WORKSPACE/bin/Release/net8.0
-  BROWSER: ${{ inputs.browser || 'chrome' }}
+  BROWSER: ${{ inputs.browser || 'firefox' }}
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
       with:
           dotnet-version: '8.0.x'
 
-    - name: Install browser dependencies
+    - name: Install Chrome dependencies
       if: ${{ env.BROWSER == 'chrome' }}
       run: |
           sudo apt-get update
@@ -41,6 +41,15 @@ jobs:
           google-chrome --version
           which google-chrome
 
+    - name: Install Firefox dependencies
+      if: ${{ env.BROWSER == 'firefox' }}
+      run: |
+          wget -O firefox.tar.bz2 "download.mozilla.org"
+          sudo mkdir -p /opt/firefox
+          sudo tar xjf firefox.tar.bz2 -C /opt/firefox --strip-components=1
+          echo "PATH=$PATH:/opt/firefox" >> $GITHUB_ENV
+          firefox --version
+      
     - name: "Restore dependencies"
       run: dotnet restore
       working-directory: .
