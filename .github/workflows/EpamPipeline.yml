@@ -17,7 +17,7 @@ on:
 
 env:
   OUTPUT_DIR: $GITHUB_WORKSPACE/bin/Release/net8.0
-  BROWSER: ${{ inputs.browser || 'firefox' }}
+  BROWSER: ${{ inputs.browser || 'chrome' }}
 
 jobs:
   build:
