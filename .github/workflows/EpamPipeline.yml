@@ -17,7 +17,7 @@ on:
 
 env:
   OUTPUT_DIR: $GITHUB_WORKSPACE/bin/Release/net8.0
-  BROWSER: ${{ inputs.browser || 'chrome' }}
+  BROWSER: ${{ inputs.browser || 'firefox' }}
 
 jobs:
   build:
@@ -32,9 +32,9 @@ jobs:
       with:
           dotnet-version: '8.0.x'
 
-    - name: Install Chrome dependencies
+    - name: Install browser dependencies
+      if: ${{ env.BROWSER == chrome }}
       run: |
-          echo ***${{ env.BROWSER }}***
           sudo apt-get update
           sudo apt-get install google-chrome-stable
           sudo apt-get install -y libglib2.0-0 libnss3 libfontconfig1
