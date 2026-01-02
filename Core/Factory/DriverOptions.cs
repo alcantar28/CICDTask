@@ -26,7 +26,9 @@ namespace CICD.Core.Factory
             chromeOptions.AddAdditionalOption("useAutomationExtension", false);
             chromeOptions.AddArgument("window-size=1920,1080");
             chromeOptions.AddArgument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
-            
+            chromeOptions.AddArgument("--disable-blink-features=AutomationControlled");
+            chromeOptions.AddExcludedArgument("enable-automation");
+            chromeOptions.AddAdditionalOption("useAutomationExtension", false);
             return chromeOptions;
         }
 
@@ -72,5 +74,6 @@ namespace CICD.Core.Factory
         }
     }
 }
+
 
 
