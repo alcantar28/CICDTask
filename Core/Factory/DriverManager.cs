@@ -40,7 +40,12 @@ namespace CICD.Core.Factory
                         throw new Exception($"Unable to set browser type {browser}");
                 }
                 driver.Value.Manage().Timeouts().ImplicitWait.Add(TimeSpan.FromSeconds(Seconds));
-                driver.Value.Manage().Window.Maximize();
+
+                // Window.Maximize() does not work in headless mode, window size must be set via arguments
+                if (!isHeadless)
+                {
+                    driver.Value.Manage().Window.Maximize();
+                }
             }
             return driver.Value;
         }
