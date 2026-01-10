@@ -7,8 +7,15 @@ namespace CICD.Core.Utilities
         public static void TakeScreenshot(IWebDriver driver)
         {
             var screenshotFile = Path.Combine(Environment.CurrentDirectory, TestContext.CurrentContext.Test.MethodName + ".png");
+            var element = driver.FindElement(By.TagName("h1"));
+
+            //For full page screenshot
             ITakesScreenshot ScreenshotDriver = (ITakesScreenshot)driver;
             ScreenshotDriver.GetScreenshot().SaveAsFile(screenshotFile);
+
+            ////For specific element screenshot
+            //var elementScreenshot = ((ITakesScreenshot)element).GetScreenshot();
+            //elementScreenshot.SaveAsFile(screenshotFile);
         }
     }
 }
