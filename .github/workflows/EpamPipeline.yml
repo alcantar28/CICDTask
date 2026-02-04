@@ -1,6 +1,6 @@
 name: .NET ATM CICD Pipeline
 on:
-  schedule:
+  #schedule:
     #- cron: '*/5 * * * *'
   push:
     branches:
